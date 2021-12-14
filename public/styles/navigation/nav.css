@@ -1,5 +1,6 @@
 nav {
   display: flex;
+  z-index: 3;
   color: #FFFFFF;
   background-color: #4056a1;
   font-size: 24px;
@@ -39,3 +40,6 @@ nav span {
   justify-content: center;
 }
 
+.header {
+  z-index: 3
+}
