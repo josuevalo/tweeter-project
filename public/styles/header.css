@@ -5,9 +5,10 @@ header {
   width: 100%;
   justify-content: center;
   flex-direction: column;
+  background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
   align-items: center;
 }
 
-.avatar {
-  align-items: center;
-}
+/* .avatar {
+  /* align-items: center; 
+}*/
