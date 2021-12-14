@@ -17,7 +17,7 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
-.container {
+.nav-container {
   display: flex;
   flex-direction: column;
  

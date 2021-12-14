@@ -22,6 +22,12 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
