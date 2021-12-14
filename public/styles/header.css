@@ -1,14 +1,17 @@
 header {
   display: flex;
-  background-color: #9ee1ac;
+  background-color: #eebc18;
   height: 400px;
   width: 100%;
   justify-content: center;
   flex-direction: column;
   background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
   align-items: center;
+  color: #FFFFFF;
+  /* font-weight: lighter; */
+
 }
 
-/* .avatar {
-  /* align-items: center; 
-}*/
+.font-weight-normal {
+  font-weight: normal;
+}
