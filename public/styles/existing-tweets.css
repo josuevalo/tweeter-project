@@ -1,3 +1,27 @@
 .existingTweet {
+  border: 5px solid #545149;
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  /* padding: 1em; */
+
+}
+
+/* .picture {
+border: 5px dotted blue;
+
+} */
+
+.tweeterTweeted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweetedWords {
+  display: flex;
+  border-bottom: 5px solid #545149;
+  padding-bottom: 30px;;
   
 }

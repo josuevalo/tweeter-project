@@ -29,7 +29,7 @@
 
 .text-area {
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 5px solid #545149;
   width: 100%;
   background-color: transparent;
   height: 40px;
