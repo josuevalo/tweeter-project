@@ -20,6 +20,13 @@
   font-weight: bold;
 }
 
+.newCount {
+  align-items: center;
+  font-family: 'bungee';
+  font-weight: bold;
+  color: red
+}
+
 .text-area {
   border: none;
   border-bottom: 2px solid black;
