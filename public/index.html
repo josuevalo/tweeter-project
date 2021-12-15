@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -31,6 +32,7 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="./scripts/composer-char-counter.js"></script>
+  <script src="./scripts/client.js"></script>
 </head>
 
 <body>
@@ -69,94 +71,8 @@
         </div>
       </form>
     </section>
-
-
-    <section>
-      <article class="existingTweet">
-        <header>
-          <div class="tweetingUser">
-            <img src="https://i.imgur.com/2WZtOD6.png" alt="Peter" class="userAvatar">
-            <p class="name">Peter</p>
-          </div>
-          <div class="tweetedAt">
-            <p class="tweetingAtUser">@MaryJane</p>
-          </div>
-        </header>
-        <p class="tweetedWords">Who has time for everything?</p>
-        <footer>
-          <p>1 day ago</p>
-          <div class="icons">
-            <div class="icon">
-              <i class="fas fa-flag"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-retweet"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </footer>
-      </article>
-    </section>
-    <section>
-      <article class="existingTweet">
-        <header>
-          <div class="tweetingUser">
-            <img src="https://i.imgur.com/nlhLi3I.png" alt="Aunt May" class="userAvatar">
-            <p class="name">Aunt May</p>
-          </div>
-          <div class="tweetedAt">
-            <p class="tweetingAtUser">@peterparker</p>
-          </div>
-        </header>
-        <p class="tweetedWords">Wondering where that kid is. He's never home and always running after things</p>
-        <footer>
-          <p>3 days ago</p>
-          <div class="icons">
-            <div class="icon">
-              <i class="fas fa-flag"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-retweet"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </footer>
-      </article>
-    </section>
-    <section>
-      <article class="existingTweet">
-        <header>
-          <div class="tweetingUser">
-            <img src="https://i.imgur.com/ilT4JDe.png" alt="Flash" class="userAvatar">
-            <p class="name">Flash</p>
-          </div>
-          <div class="tweetedAt">
-            <p class="tweetingAtUser">@peterparker</p>
-          </div>
-        </header>
-        <p class="tweetedWords">Parker is such a dork</p>
-        <footer>
-          <p>10 days ago</p>
-          <div class="icons">
-            <div class="icon">
-              <i class="fas fa-flag"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-retweet"></i>
-            </div>
-            <div class="icon">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </footer>
-      </article>
-    </section>
-
-
+<div id="tweets-container">
+  </div>
   </main>
 
 </body>
