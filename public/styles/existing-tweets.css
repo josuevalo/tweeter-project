@@ -1,27 +1,64 @@
 .existingTweet {
   border: 5px solid #545149;
   padding: 1em;
+  margin-top: 2.5em;
+  
 }
 
 header {
   display: flex;
-  /* padding: 1em; */
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.tweetingUser {
+display: flex;
 
 }
 
-/* .picture {
-border: 5px dotted blue;
-
-} */
-
-.tweeterTweeted {
+.tweetedAt {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .tweetedWords {
   display: flex;
   border-bottom: 5px solid #545149;
-  padding-bottom: 30px;;
+  padding-bottom: 30px;
+  margin-bottom: 7px;
+  padding-left: 1em;
+
   
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 0 1em 
+}
+
+.icons {
+  display: flex;
+  color: #4056a1;
+  justify-content: space-evenly;
+  
+
+}
+
+.icon {
+  margin: 5px 5px 5px 5px;
+}
+
+.userAvatar {
+  object-fit: cover;
+  
+}
+
+.name {
+  margin-left: 14px;
+}
+
+.tweetingAtUser {
+  color: #bbb5ac;
 }
