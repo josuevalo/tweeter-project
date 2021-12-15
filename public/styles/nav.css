@@ -5,6 +5,9 @@ nav {
   background-color: #4056a1;
   font-size: 24px;
   justify-content: space-between;
+  position: fixed; 
+  top: 0;
+  width: 100%;
   -moz-box-sizing: border-box;
          padding: 1.5em; 
          box-sizing: border-box;
