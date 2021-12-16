@@ -85,4 +85,13 @@ const renderTweets = function(tweets) {
 
 
 renderTweets(tweetData);
+
+
+$('#tweetForm').on('submit', (event) => {
+  event.preventDefault();
+  console.log("Test - did this work?")
+})
+
+
+
 });
