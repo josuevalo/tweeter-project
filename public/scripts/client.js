@@ -1,15 +1,15 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
   const tweetData = [
     {
       "user": {
-              "name": "Newton",
-              "avatars": "https://i.imgur.com/73hZDYK.png"
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
         ,
-              "handle": "@SirIsaac"
+        "handle": "@SirIsaac"
       },
       "content": {
-                "text": "If I have seen further it is by standing on the shoulders of giants"
+        "text": "If I have seen further it is by standing on the shoulders of giants"
       },
       "created_at": 1461116232227
     },
@@ -23,11 +23,11 @@ $(document).ready(function () {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
-const createTweetElement = function (tweetObject) {
-  const time = timeago.format(`${tweetObject.created_at}`)
-  const $markup = `
+  const createTweetElement = function(tweetObject) {
+    const time = timeago.format(`${tweetObject.created_at}`);
+    const $markup = `
   <section>
   <article class="existingTweet">
   <header>
@@ -58,40 +58,76 @@ const createTweetElement = function (tweetObject) {
             </article>
             </section>
             `;
-      return $markup
-}
-// Test / driver code (temporary). Eventually will get this from the server.
+    return $markup;
+  };
+  // Test / driver code (temporary). Eventually will get this from the server.
 
 
-// const $tweet = createTweetElement(tweetData);
+  // const $tweet = createTweetElement(tweetData);
 
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // Test / driver code (temporary)
+  // console.log($tweet); // to see what it looks like
+  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 
-const renderTweets = function(tweets) {
+  const renderTweets = function(tweets) {
 
-  (tweets).forEach(tweet => {
-    console.log("TWEET", tweet)
-    const value = createTweetElement(tweet)
-    console.log("VALUE", value)
-    $('#tweets-container').append(value);
-  });
+    (tweets).forEach(tweet => {
+      console.log("TWEET", tweet);
+      const value = createTweetElement(tweet);
+      console.log("VALUE", value);
+      $('#tweets-container').append(value);
+    });
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-}
+  };
 
 
-renderTweets(tweetData);
+  renderTweets(tweetData);
 
 
-$('#tweetForm').on('submit', (event) => {
-  event.preventDefault();
-  console.log("Test - did this work?")
-})
+  $('#tweetForm').on('submit', (event) => {
+    event.preventDefault();
+    console.log("Serialize this!", $('#tweetForm').serialize());
+    console.log("Test - did this work?");
+  
+    $.post("http://localhost:8080/tweets/", $("#tweetForm").serialize());
+  
+  });
+
+  // $.ajax({
+  //   url: 'http://localhost:8080/tweets/',
+  //   method: 'POST'
+  // })
+
+  // .then((response) => {
+  //   console.log('response:', response[1]);
+  //   // renderTweets(response);
+    
+  // })
+  // .catch((error) => {
+  //   console.log("error:", error);
+  // })
 
 
 
+  // });
+
+
+
+
+  // $('#tweetForm').on('submit', (event) => {
+  //   event.preventDefault();
+  //   console.log("Test - did this work?");
+  //   console.log("Serialize this!", $(this).serialize());
+  
+  //   .then((response) => {
+  //     console.log('response:', response[1]);
+  //     // renderTweets(response);
+    
+//   });
+//   .catch((error) => {
+//     console.log("error:", error);
+//   });
 });
