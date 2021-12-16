@@ -40,19 +40,18 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
 
     (tweets).forEach(tweet => {
-      console.log("TWEET", tweet)
       const value = createTweetElement(tweet)
-      console.log("VALUE", value)
       $('#tweets-container').append(value);
     });
   
   }
   
   const loadTweets = function () {
-
+   
     $.ajax({
       url: 'http://localhost:8080/tweets/',
       method: 'GET' 
+    
     })
   
     .then((response) => {
@@ -65,12 +64,27 @@ $(document).ready(function () {
     })
     
   }
+
   loadTweets();
 
 
 
 
   $('#tweetForm').on('submit', (event) => {
+   const formData =  $('#tweetForm')[0][0].value
+
+    if (formData === "" || formData === null) {
+      alert("Sorry! The text field cannot be empty!");
+      event.preventDefault();
+      return
+    } 
+
+    if (formData.length > 140) {
+      alert("Sorry! The tweet is too long! Please stay under 140 characters.");
+      event.preventDefault();
+      return
+    }
+    
     event.preventDefault();
     console.log("Serialize this!", $('#tweetForm').serialize());
     console.log("Test - did this work?")
