@@ -46,3 +46,7 @@ nav span {
 .header {
   z-index: 3
 }
+
+#clickForTweet{
+cursor: pointer
+}

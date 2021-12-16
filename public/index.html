@@ -43,9 +43,9 @@
     <div class="nav-container">
       <span>tweeter</span>
     </div>
-    <div class="nav-container">
+    <div class="nav-container" id="clickForTweet">
       <div class="write-tweet"><span class="bold">Write </span> a new tweet</div>
-      <div class="arrow">
+      <div class="arrow" id="arrow">
         <i class="fas fa-angle-double-down"></i>
       </div>
     </div>
@@ -54,7 +54,7 @@
   <!-- Page-specific (main) content here -->
   <header class="top">
     <div>
-      <img class="avatar" src="/images/profile-hex.png">
+      <img id="avatar" class="avatar" src="/images/profile-hex.png">
     </div>
     <br>
     <div class="name">
@@ -62,7 +62,7 @@
     </div>
   </header>
   <main class="container">
-    <section class="new-tweet">
+    <section class="new-tweet" id="newTweet" hidden=true>
       <h2>Compose Tweet</h2>
       <div id="errorEmpty" hidden=true>
         <p class="errorEmpty"><i class="fas fa-exclamation-circle"></i>      Text field can't be empty! Please try again.     <i class="fas fa-exclamation-circle"></i></p>

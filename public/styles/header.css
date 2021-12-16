@@ -16,3 +16,6 @@
   font-weight: normal;
 }
 
+#avatar {
+  cursor: pointer
+}

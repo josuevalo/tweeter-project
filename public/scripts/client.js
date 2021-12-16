@@ -106,12 +106,21 @@ $(document).ready(function () {
   });
 
 
-
-
-
-
-
-
+/// Code for 'Write New Tweet' toggle ///
+  const myFunction = function () {
+    $('#newTweet').toggle(700);
+    // $('#newTweet').slideDown(250)
+    // $('#newTweet').slideUp(250)
+  }
+  $('#clickForTweet').click("click", myFunction);
+  
+  const myAvatar = function () {
+    $('#newTweet').toggle(700);
+    // $('#newTweet').slideDown(250)
+    // $('#newTweet').slideUp(250)
+  }
+  $('#avatar').click("click", myAvatar);
+  
 
 });
 {/* <p class="tweetedWords">${tweetObject.content.text}</p> */}
