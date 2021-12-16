@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 
   const renderTweets = function (tweets) {
-
+    $('#tweets-container').empty();
     (tweets).forEach(tweet => {
       const value = createTweetElement(tweet)
       $('#tweets-container').append(value);
@@ -53,11 +53,9 @@ $(document).ready(function () {
       method: 'GET' 
     
     })
-  
     .then((response) => {
       console.log('response:', response[1]);
-      renderTweets(response);
-  
+      renderTweets(response.sort((a,b) => b.created_at - a.created_at))
     })
     .catch((error) => {
       console.log("error:", error);
@@ -86,10 +84,16 @@ $(document).ready(function () {
     }
     
     event.preventDefault();
-    console.log("Serialize this!", $('#tweetForm').serialize());
-    console.log("Test - did this work?")
-
-    $.post("http://localhost:8080/tweets/", $("#tweetForm").serialize());
+    $.post("http://localhost:8080/tweets/", $("#tweetForm").serialize())
+    .then((response) => {
+      loadTweets();
+      $('#tweetForm')[0][0].value = "";
+      $('#tweetForm')[0][0].focus();
+ 
+    })
+    .catch((error) => {
+      console.log("error:", error);
+    })
 
   });
 
