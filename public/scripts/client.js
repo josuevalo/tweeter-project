@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+  const escape = function (str) {
+    let span = document.createElement("span");
+    span.appendChild(document.createTextNode(str));
+    return span.innerHTML;
+  };
+
   const createTweetElement = function (tweetObject) {
     const time = timeago.format(`${tweetObject.created_at}`)
     const $markup = `
@@ -14,9 +20,8 @@ $(document).ready(function () {
           <p class="tweetingAtUser">${tweetObject.user.handle}</p>
         </div>
       </header>
-      <p class="tweetedWords">${tweetObject.content.text}</p>
+      <p class="tweetedWords">${escape(tweetObject.content.text)}</p>
       <footer>
-  
         <p> ${time} </p>
         <div class="icons">
           <div class="icon">
@@ -33,6 +38,7 @@ $(document).ready(function () {
     </article>
   </section>
  `;
+
     return $markup;
   }
 
@@ -72,7 +78,10 @@ $(document).ready(function () {
    const formData =  $('#tweetForm')[0][0].value
  
     if (formData === "" || formData === null) {
-      alert("Sorry! The text field cannot be empty!");
+      // alert("Sorry! The text field cannot be empty!");
+      // $('#errorTooLong').show()
+      $('#errorTooLong').slideDown(250)
+      setInterval($('#errorTooLong').hide(250), 4000);
       
       event.preventDefault();
       return
@@ -80,6 +89,7 @@ $(document).ready(function () {
 
     if (formData.length > 140) {
       alert("Sorry! The tweet is too long! Please stay under 140 characters.");
+      
       event.preventDefault();
       return
     }
@@ -107,3 +117,4 @@ $(document).ready(function () {
 
 
 });
+{/* <p class="tweetedWords">${tweetObject.content.text}</p> */}
