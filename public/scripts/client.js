@@ -85,7 +85,6 @@ $(document).ready(function () {
     
     if (formData.length > 140) {
       $('#errorTooLong').slideDown(250)
-      
       event.preventDefault();
       return
     }

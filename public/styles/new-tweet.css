@@ -5,7 +5,7 @@
   text-align: center;
   font-size: 18px;
   font-family: 'Bungee';
-  height: 30px;
+  height: 40px;
   
 }
 
@@ -32,7 +32,7 @@
   border-bottom: 5px solid #545149;
   width: 100%;
   background-color: transparent;
-  height: 40px;
+  height: 63px;
 }
 
 .button-area {
@@ -44,13 +44,12 @@
 .humming-label {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 15px;
 }
 
 #errorTooLong {
-
   border: 5px solid red;
-  color: red;
- 
+  color: red; 
   width: 85%;
   margin: 1em auto ;
 
@@ -59,7 +58,6 @@
 #errorEmpty {
   border: 5px solid red;
   color: red;
- 
   width: 85%;
   margin: 1em auto ;
 
