@@ -56,5 +56,13 @@
 
 }
 
+#errorEmpty {
+  border: 5px solid red;
+  color: red;
+ 
+  width: 85%;
+  margin: 1em auto ;
+
+}
 
 

@@ -78,17 +78,13 @@ $(document).ready(function () {
    const formData =  $('#tweetForm')[0][0].value
  
     if (formData === "" || formData === null) {
-      // alert("Sorry! The text field cannot be empty!");
-      // $('#errorTooLong').show()
-      $('#errorTooLong').slideDown(250)
-      setInterval($('#errorTooLong').hide(250), 4000);
-      
+      $('#errorEmpty').slideDown(250)
       event.preventDefault();
       return
     } 
-
+    
     if (formData.length > 140) {
-      alert("Sorry! The tweet is too long! Please stay under 140 characters.");
+      $('#errorTooLong').slideDown(250)
       
       event.preventDefault();
       return
@@ -100,7 +96,9 @@ $(document).ready(function () {
       loadTweets();
       $('#tweetForm')[0][0].value = "";
       $('#tweetForm')[0][0].focus();
- 
+      $('#errorEmpty').slideUp(250);
+      $('#errorTooLong').slideUp(250)
+      
     })
     .catch((error) => {
       console.log("error:", error);
