@@ -1,7 +1,7 @@
 .top {
   display: flex;
   background-color: #eebc18;
-  height: 400px;
+  height: 425px;
   width: 100%;
   justify-content: center;
   flex-direction: column;
@@ -18,4 +18,9 @@
 
 #avatar {
   cursor: pointer
+}
+ 
+#avatar:hover {
+  top: 10px;
+  transform: scale(1.1); 
 }

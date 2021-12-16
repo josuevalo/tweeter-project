@@ -30,7 +30,7 @@ $(document).ready(function () {
           <div class="icon">
             <i class="fas fa-retweet"></i>
           </div>
-          <div class="icon">
+          <div class="icon" id="heart">
             <i class="fas fa-heart"></i>
           </div>
         </div>
@@ -107,20 +107,31 @@ $(document).ready(function () {
 
 
 /// Code for 'Write New Tweet' toggle ///
-  const myFunction = function () {
+  const toggleFunction = function () {
     $('#newTweet').toggle(700);
-    // $('#newTweet').slideDown(250)
-    // $('#newTweet').slideUp(250)
-  }
-  $('#clickForTweet').click("click", myFunction);
+    $('#tweetForm')[0][0].focus();
+   }
+  $('#clickForTweet').click("click", toggleFunction);
+  
   
   const myAvatar = function () {
     $('#newTweet').toggle(700);
-    // $('#newTweet').slideDown(250)
-    // $('#newTweet').slideUp(250)
+    $('#tweetForm')[0][0].focus();
   }
   $('#avatar').click("click", myAvatar);
+
   
+
+
+// TRYING TO MAKE THE HEARTS STAY RED WHEN CLICKED //
+// const likeFunction = function () {
+//   $('#heart').addClass("heart");
+//   alert('hi')
+// }
+// $('#heart').click("click", likeFunction)
+  // $('#heart').click(function(){
+  //   $(this).toggleClass('clicked');
+  // });
 
 });
 {/* <p class="tweetedWords">${tweetObject.content.text}</p> */}

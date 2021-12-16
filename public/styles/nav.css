@@ -23,13 +23,22 @@ nav span {
 .nav-container {
   display: flex;
   flex-direction: column;
- 
+  
 }
 
 .write-tweet {
   display: flex;
   align-items: flex-end;
+  /* transition: all .2s ease-in-out;
+  position:relative;
+  transition:top 0.5s;
+  top:0; */
 }
+
+.write-tweet:hover {
+  top: 10px;
+  transform: scale(1.1); 
+ }
 
 .bold {
   font-family: 'Source Sans Pro';
@@ -41,12 +50,26 @@ nav span {
   display: flex;
   color: red;
   justify-content: center;
+  position: relative;
+  transition: top 0.5s;
+  top: 0;
+}
+
+.arrow:hover { 
+  top: 10px;
 }
 
 .header {
   z-index: 3
 }
 
-#clickForTweet{
-cursor: pointer
+#clickForTweet {
+cursor: pointer;
+
+}
+
+#clickForTweet:hover {
+  top: 10px;
+  
+  
 }

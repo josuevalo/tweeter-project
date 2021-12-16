@@ -5,8 +5,8 @@
   transition: box-shadow 1s;
 }
 .existingTweet:hover {
-  transition: 1s background-color;
-  box-shadow: 10px 10px #b7c0df
+  transition: 4s background-color;
+  box-shadow: 15px 15px #b7c0df
 }
 
 header {
@@ -68,3 +68,11 @@ footer {
 .tweetingAtUser {
   color: #bbb5ac;
 }
+
+/* #heart {
+  cursor: pointer;
+}
+
+.heart {
+  color: yellow;
+} */

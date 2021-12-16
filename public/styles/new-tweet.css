@@ -10,8 +10,10 @@
 }
 
 .button:hover {
-  border: 3px solid rgb(52, 97, 243);
-  transition: .5s background-color;
+  border: 5px solid rgb(52, 97, 243);
+  transition: 1.5s background-color;
+  /* transition: 1s background-color;
+  box-shadow: 10px 10px #b7c0df */
 }
 
 .counter {
