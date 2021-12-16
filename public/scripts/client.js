@@ -70,9 +70,10 @@ $(document).ready(function () {
 
   $('#tweetForm').on('submit', (event) => {
    const formData =  $('#tweetForm')[0][0].value
-
+ 
     if (formData === "" || formData === null) {
       alert("Sorry! The text field cannot be empty!");
+      
       event.preventDefault();
       return
     } 

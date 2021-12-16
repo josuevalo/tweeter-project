@@ -45,3 +45,16 @@
   display: flex;
   justify-content: flex-start;
 }
+
+#errorTooLong {
+
+  border: 5px solid red;
+  color: red;
+ 
+  width: 85%;
+  margin: 1em auto ;
+
+}
+
+
+
