@@ -76,6 +76,7 @@ $(document).ready(function () {
 
   $('#tweetForm').on('submit', (event) => {
    const formData =  $('#tweetForm')[0][0].value
+  
  
     if (formData === "" || formData === null) {
       $('#errorEmpty').slideDown(250)
@@ -97,6 +98,12 @@ $(document).ready(function () {
       $('#tweetForm')[0][0].focus();
       $('#errorEmpty').slideUp(250);
       $('#errorTooLong').slideUp(250)
+     
+      // This restarts the counter after submitting //
+      const $tweetText = $('#tweet-text').parent()[0];
+      const $counter = $($tweetText).find(".counter")[0];
+
+      $counter.value = 140
       
     })
     .catch((error) => {

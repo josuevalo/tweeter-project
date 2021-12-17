@@ -29,8 +29,17 @@ body {
   text-align: center;
 }
 
-
+.headerPush {
+  margin-top: 160px;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 768px) {
+body {
+  display: flex;
+} 
+
+}

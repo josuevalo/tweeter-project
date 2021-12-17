@@ -21,6 +21,7 @@ if ($counter.value > 0) {
 
 
 
+
 // let $newCount = $counter - $newTweet
 // console.log("new counter", $newCount)
     // if ($newTweet < $counter){
