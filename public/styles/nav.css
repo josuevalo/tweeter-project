@@ -20,6 +20,11 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
+
+#tweeter {
+  font-size: 35px;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -78,6 +83,10 @@ cursor: pointer;
   nav {
    background-color: transparent;
  }
+ #tweeter {
+  font-size: 24px;
+}
+
   }
  
 
