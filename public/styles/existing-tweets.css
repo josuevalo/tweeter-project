@@ -20,7 +20,7 @@ display: flex;
 
 }
 
-.tweetedAt {
+.handle {
   display: flex;
 }
 
@@ -65,7 +65,7 @@ footer {
   margin-left: 14px;
 }
 
-.tweetingAtUser {
+.atUserHandle {
   color: #bbb5ac;
 }
 

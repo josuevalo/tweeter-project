@@ -16,11 +16,13 @@ $(document).ready(function () {
           <img src=${tweetObject.user.avatars} alt=${tweetObject.user.name} class="userAvatar">
           <p class="name">${tweetObject.user.name}</p>
         </div>
-        <div class="tweetedAt">
-          <p class="tweetingAtUser">${tweetObject.user.handle}</p>
+        <div class="handle">
+          <p class="atUserHandle">${tweetObject.user.handle}</p>
         </div>
       </header>
+      <body>
       <p class="tweetedWords">${escape(tweetObject.content.text)}</p>
+      </body>
       <footer>
         <p> ${time} </p>
         <div class="icons">
@@ -76,6 +78,8 @@ $(document).ready(function () {
 
   $('#tweetForm').on('submit', (event) => {
    const formData =  $('#tweetForm')[0][0].value
+   $('#errorEmpty').slideUp(250);
+   $('#errorTooLong').slideUp(250)
   
  
     if (formData === "" || formData === null) {
@@ -96,8 +100,7 @@ $(document).ready(function () {
       loadTweets();
       $('#tweetForm')[0][0].value = "";
       $('#tweetForm')[0][0].focus();
-      $('#errorEmpty').slideUp(250);
-      $('#errorTooLong').slideUp(250)
+   
      
       // This restarts the counter after submitting //
       const $tweetText = $('#tweet-text').parent()[0];
