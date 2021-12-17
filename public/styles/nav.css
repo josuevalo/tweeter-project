@@ -23,6 +23,7 @@ nav span {
 
 #tweeter {
   font-size: 35px;
+  cursor: pointer; 
 }
 
 .nav-container {

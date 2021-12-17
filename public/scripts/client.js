@@ -32,7 +32,7 @@ $(document).ready(function () {
           <div class="icon">
             <i class="fas fa-retweet"></i>
           </div>
-          <div class="icon" id="heart">
+          <div class="icon heart">
             <i class="fas fa-heart"></i>
           </div>
         </div>
@@ -63,7 +63,20 @@ $(document).ready(function () {
     })
     .then((response) => {
       console.log('response:', response[1]);
-      renderTweets(response.sort((a,b) => b.created_at - a.created_at))
+      renderTweets(response.sort((a,b) => b.created_at - a.created_at));
+
+      // TRYING TO MAKE THE HEARTS STAY RED WHEN CLICKED //
+const likeFunction = function () {
+  console.log("this", this)
+   $(this).toggleClass('liked');
+  // $(this).addClass("liked");
+  
+}
+console.log("heart", $('.heart'))
+$('.heart').click("click", likeFunction)
+    // $(this).toggleClass('clicked');
+  // });
+
     })
     .catch((error) => {
       console.log("error:", error);
@@ -133,15 +146,39 @@ $(document).ready(function () {
   
 
 
-// TRYING TO MAKE THE HEARTS STAY RED WHEN CLICKED //
-// const likeFunction = function () {
-//   $('#heart').addClass("heart");
-//   alert('hi')
-// }
-// $('#heart').click("click", likeFunction)
-  // $('#heart').click(function(){
-  //   $(this).toggleClass('clicked');
-  // });
+
+
+
+
+// Back To Top Button //
+
+ //Check to see if the window is top if not then display button
+ $(window).scroll(function(){
+
+  // Show button after 100px
+  const showAfter = 100;
+  if ( $(this).scrollTop() > showAfter ) { 
+   $('#backToTop').fadeIn();
+  } else { 
+   $('#backToTop').fadeOut();
+  }
+
+ });
+ 
+ //Click event to scroll to top
+ $('#backToTop').click(function(){
+  $('html, body').animate({scrollTop : 0},800);
+  return false;
+ });
+
+
+ $('#tweeter').click(function(){
+  $('html, body').animate({scrollTop : 0},800);
+  return false;
+ });
 
 });
+
+
+
 {/* <p class="tweetedWords">${tweetObject.content.text}</p> */}
