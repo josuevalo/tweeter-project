@@ -74,7 +74,7 @@ cursor: pointer;
   
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 870px) {
   nav {
    background-color: transparent;
  }

@@ -25,7 +25,7 @@
   transform: scale(1.1); 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 870px) {
   .top {
     margin-top: 0;
     
@@ -34,15 +34,18 @@
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 870px) {
   
     .top {
       display: flex;
-      height: 325px;
+      height: 525px;
       width: 40%;
       flex-direction: column;
-      align-items: center;
-      margin-top: 120px;
+      /* align-items: center; */
+      justify-content: center;
+      margin-left: 2em;
+      margin-right: 6em;
+      margin-top: 8.5em;
       position: sticky;
  }
 
