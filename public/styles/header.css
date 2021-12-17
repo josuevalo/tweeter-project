@@ -24,3 +24,12 @@
   top: 10px;
   transform: scale(1.1); 
 }
+
+@media only screen and (max-width: 768px) {
+  .top {
+    margin-top: 0;
+    
+ }
+
+
+}
