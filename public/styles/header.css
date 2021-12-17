@@ -9,47 +9,36 @@
   align-items: center;
   color: #FFFFFF;
   margin-top: 120px;
-
 }
-
 .font-weight-normal {
   font-weight: normal;
 }
-
 #avatar {
   cursor: pointer
 }
- 
 #avatar:hover {
   top: 10px;
   transform: scale(1.1); 
 }
-
+/* // Responsive design for small screens // */
 @media only screen and (max-width: 870px) {
   .top {
-    margin-top: 0;
-    
+    margin-top: 0;  
  }
-
-
 }
-
+/* // Responsive design for large screens // */
 @media only screen and (min-width: 870px) {
-  
-    .top {
-      display: flex;
-      height: 525px;
-      width: 40%;
-      flex-direction: column;
-      /* align-items: center; */
-      justify-content: center;
-      margin-left: 2em;
-      margin-right: 6em;
-      margin-top: 8.5em;
-      position: sticky;
+ .top {
+  display: flex;
+  height: 525px;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2em;
+  margin-right: 6em;
+  margin-top: 8.5em;
+  position: sticky;
  }
-
-
 }
 
 

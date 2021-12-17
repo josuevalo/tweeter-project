@@ -9,29 +9,23 @@ nav {
   top: 0;
   width: 100%;
   -moz-box-sizing: border-box;
-         padding: 1.5em; 
-         box-sizing: border-box;
-         height: 120px;
-         margin: 0px;
-         border-width: 0px;
-  
+  padding: 1.5em; 
+  box-sizing: border-box;
+  height: 120px;
+  margin: 0px;
+  border-width: 0px; 
 }
-
 nav span {
   font-family: 'Bungee', sans-serif;
 }
-
 #tweeter {
   font-size: 35px;
   cursor: pointer; 
 }
-
 .nav-container {
   display: flex;
   flex-direction: column;
-  
 }
-
 .write-tweet {
   display: flex;
   align-items: flex-end;
@@ -45,13 +39,10 @@ nav span {
   font-weight: bold;
   padding-right: 3px;
 }
-
 .write-tweet:hover {
   top: 10px;
   transform: scale(1.1); 
  }
-
-
 .arrow {
   display: flex;
   color: red;
@@ -60,26 +51,19 @@ nav span {
   transition: top 0.5s;
   top: 0;
 }
-
 .arrow:hover { 
   top: 10px;
 }
-
 .header {
   z-index: 3
 }
-
 #clickForTweet {
 cursor: pointer;
-
 }
-
 #clickForTweet:hover {
-  top: 10px;
-  
-  
+  top: 10px; 
 }
-
+/* // Responsive design for small screens // */
 @media only screen and (max-width: 870px) {
   nav {
    background-color: transparent;
@@ -87,7 +71,6 @@ cursor: pointer;
  #tweeter {
   font-size: 24px;
 }
-
   }
  
 

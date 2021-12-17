@@ -8,22 +8,17 @@
   transition: 4s background-color;
   box-shadow: 15px 15px #b7c0df
 }
-
 header {
   display: flex;
   justify-content: space-between;
   padding: 0.5em;
 }
-
 .tweetingUser {
 display: flex;
-
 }
-
 .handle {
   display: flex;
 }
-
 .tweetedWords {
   display: flex;
   border-bottom: 5px solid #545149;
@@ -31,23 +26,18 @@ display: flex;
   margin-bottom: 7px;
   padding-left: 1em;
   word-break: break-word;
-  
 }
-
 footer {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
   padding: 0 1em 
 }
-
 .icons {
   display: flex;
   color: #4056a1;
   justify-content: space-evenly;
-
 }
-
 .icon {
   margin: 5px 5px 5px 5px;
 }
@@ -55,34 +45,22 @@ footer {
   transition: 1s background-color;
   color: red;
 }
-
-/* .userAvatar {
-  object-fit: cover;
-  
-} */
-
 .name {
   margin-left: 14px;
 }
-
 .atUserHandle {
   color: #bbb5ac;
 }
-
 .heart {
   cursor: pointer;
 }
-
 .liked {
   color: red;
 }
-
+/* // Responsive Design for large screens // */
 @media only screen and (min-width: 870px) {
 #tweets-container {
   width: 90%;
   margin: auto;
-
 }
-
-
 }
